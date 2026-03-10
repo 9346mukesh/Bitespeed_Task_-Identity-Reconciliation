@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const { handleIdentify } = require("../controllers/identifyController");
 
-router.post("/", (req, res) => {
-  res.json({ message: "Identify endpoint - coming soon" });
-});
+router.post("/", handleIdentify);
 
 module.exports = router;
